@@ -5,7 +5,7 @@ Descritpion : A Palindrome number is a number that remains the same when its dig
 
 import java.util.Scanner;
 
-class P{
+class Palindrome_or_not{
 
 public static void main(String args[])
 {
