@@ -12,6 +12,10 @@ class WebGraph
    private int dist[]; 
    private int par[]; 
     
+   /**
+    * Constructor to create a WebGraph
+    * @param v
+    */
     WebGraph(int v)
     {
         V = v;
@@ -28,13 +32,21 @@ class WebGraph
         }
     }
  
-   
+   /**
+    * This is to add an edge in the WebGraph with Vertices v and Weight w
+    * @param v
+    * @param w
+    */
     void addEdge(int v,int w)
     {
         adj[v].add(w);
     }
  
    
+    /**
+     * This api performs Breadth First Search in (this)WebGraph
+     * @param s
+     */
     void BFS(int s)
     {
         
@@ -81,6 +93,13 @@ class WebGraph
         }
     }
     
+    /**
+	 * Thus api prints a path(showing all the vertices in between s and d
+	 * vertices) from Source vertices s to Destination vertices d
+	 * 
+	 * @param s
+	 * @param d
+	 */
     void path(int s,int d)
     {
         BFS(s);
@@ -98,6 +117,9 @@ class WebGraph
         System.out.println("\nDistance form "+s+" to "+d+" is : "+dist[d]);
         
     }
+    /**
+     * This api prints the diameter of this WebGraph
+     */
     void diameter()
     {
         int max=Integer.MIN_VALUE;

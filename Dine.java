@@ -7,7 +7,7 @@ public class Dine{
 		int x=10;
 
 		Log.msg(String.valueOf(x));
- 
+ 		/* Initializing 5 chopsticks */
 		Chopstick[] chopistics = new Chopstick[5];
 
 		for(int i=0; i< chopistics.length; i++){
@@ -15,6 +15,7 @@ public class Dine{
 			chopistics[i] = new Chopstick("C: "+i);
 		}
                 
+		// Initialising five philosophers and their corresponding positions 
 		Philosopher[] philosophers = new Philosopher[5];
                 
 		philosophers[0] = new Philosopher("P: 0 - ", chopistics[0], chopistics[1]);
@@ -38,7 +39,7 @@ public class Dine{
  	}
 }
 
-
+//Class for philosophers
 class Philosopher extends Thread
 {
 	private Chopstick leftChopistick;
@@ -62,6 +63,9 @@ class Philosopher extends Thread
  
 	public void eat()
 	{
+	// While eating, every philosopher pics up the left chopstick first and the the right chopstick. If the philosopher gets both the chopsticks
+	// he eats for 1000 ms and then releases the chopsticks
+	//Else he waits for chopsticks to be free
 		if(! leftChopistick.used){
                     
 			if(!rightChopistick.used){
@@ -115,6 +119,7 @@ class Log{
 	}
 }
 
+//Class for chopstick that provides use and release functionalities to pilosophers
 class Chopstick{
 
 	public boolean used;
@@ -125,13 +130,15 @@ class Chopstick{
             
 		this.name = name;
 	}
-
+	//method to reserve the chopstick for use
 	public synchronized void take() {
             
 		Log.msg ("Used :: " + name );
                 
 		this.used = true;
 	}
+	
+	//method to release the chopstick for use
 	public synchronized void release() {
             
 		Log.msg ("Released :: " + name );
