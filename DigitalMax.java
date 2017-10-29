@@ -1,3 +1,4 @@
+// findind the digital max
 package javacodes;
 
 import java.util.*;
