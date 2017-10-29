@@ -1,4 +1,6 @@
-
+/**		
+* This class is to represent a Graph and to perform some operation in Graph		
+*/
 import java.util.*;
  
 

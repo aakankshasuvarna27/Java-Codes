@@ -1,3 +1,6 @@
+/*		
+this program is used to find minimum distance between two vertices while traversing all available vertices.		
+*/
 
 import java.util.*;
  

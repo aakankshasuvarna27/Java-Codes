@@ -1,3 +1,4 @@
+/* Program for the classic dining philosopher problem in operating system */
 
 public class Dine{
     
