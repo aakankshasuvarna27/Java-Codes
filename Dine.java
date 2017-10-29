@@ -1,5 +1,3 @@
-package javacodes;
-
 
 public class Dine{
     

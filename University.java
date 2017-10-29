@@ -1,5 +1,3 @@
-package javacodes;
-
 import java.util.*;
 
 class Students

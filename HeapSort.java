@@ -1,4 +1,3 @@
-package javacodes;
 
 /**
  * Created by antrix190 on 22/10/2017

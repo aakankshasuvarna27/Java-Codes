@@ -1,6 +1,4 @@
 
-package javacodes;
-
 import java.util.*;
 
 public class ProduConsum{
