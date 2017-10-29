@@ -18,11 +18,11 @@ public class ProduConsum{
         
         Thread ct=new Thread(c);
         
-        pt.start();
+        pt.start();             // Thread execution begins
         
         ct.start();
         
-        pt.join();
+        pt.join();              // Current thread execution is paused, until specified thread is dead.
         
         ct.join();
         
@@ -84,7 +84,7 @@ class Queue
         if(!valueset)
         {
             try {
-                wait();
+                wait();     // Current thread will wait until notify() is invoked
                 
             } catch (InterruptedException e) {
                 
@@ -95,7 +95,7 @@ class Queue
         
         System.out.println("Got"+" "+this.n);
         
-        notify();
+        notify();           // Wakes up thread that is waiting on Object's monitor
     }
     synchronized void set(int n)
     {
