@@ -16,9 +16,18 @@ public class JavaDateAndTime {
     public static String getDay(String day, String month, String year) {
           
         int y = Integer.parseInt(year);
+        /**
+          * Converts the String type year into integer type y using parseInt() method)
+       */   
+       
         int m = Integer.parseInt(month);
+        /**
+           * Converts the String type month into integer type y using parseInt() method)
+       */   
         int d = Integer.parseInt(day);
-          
+          /**
+           * Converts the String type day into integer type y using parseInt() method)
+       */   
         Calendar c = Calendar.getInstance();
         c.set(y, m-1, d); 
             
