@@ -24,7 +24,8 @@ public class Dijkstra {
         return index;
     }
 
-    void printSolution(int dist[], int n) {
+    void printSolution(int dist[], int n) // It displays Vertex Distance from Source
+    {
         System.out.println("Vertex   Distance from Source");
 
         for (int i = 0; i < V; i++) {
