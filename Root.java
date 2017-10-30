@@ -1,8 +1,9 @@
 /* This program is to find value of root node in a tree 
 when value of each node and sum of child nodes of all nodes is given. */
-package javacodes;
 
-import java.util.*;     //import packages
+package javacodes;    //encapsulates a group of classes into a package called javacodes
+
+import java.util.*;     //import package of util class
 
 public class Root {
 
