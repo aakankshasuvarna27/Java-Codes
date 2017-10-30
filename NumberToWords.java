@@ -1,6 +1,7 @@
 /*Given a number, you have to write it in words*/
 import java.io.*;
 import java.util.*;
+//number to word
 class NumberToWords
 {
     public static void main(String[] args)throws IOException
