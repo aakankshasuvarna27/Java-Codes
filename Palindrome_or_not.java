@@ -13,11 +13,11 @@ class Palindrome_or_not {
     Scanner x = new Scanner(System.in);
     
     String st=x.next();
-    String w="";
+    String w=""; // Creating new string to apply algo on!
     int i;
     for(i=0;i<st.length();i++)
-      w=st.charAt(i)+w;
-    if(st.compareTo(w)==0)
+      w=st.charAt(i)+w; //Reversing the String and Storing it.
+    if(st.compareTo(w)==0) //Comparing the string to original string
       System.out.prinltn("Number is Pallindrome");
     else
       System.out.println("Number is Not Pallindrome");
