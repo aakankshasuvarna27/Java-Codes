@@ -1,7 +1,14 @@
+/**
+ * This class represents University and contains it's child domain classes(Course, Student, Sem, Department and Institute)
+ */
 package javacodes;
 
 import java.util.*;
 
+/**
+ * This class is to represnt a Student
+ *
+ */
 class Students
 {
     String name="";
@@ -20,7 +27,7 @@ class Students
     }
     
     Students(){}
-    
+    //Student setter method
     void setstu(String name,int roll,double cgpa)
     {
         this.name=name;
@@ -29,11 +36,17 @@ class Students
         
         this.cgpa=cgpa;
     }
+    //Student getter method
     void getstu()
     {
         System.out.println(name+"\t"+roll+"\t"+cgpa);
     }
 }
+
+/**
+ * This class is to represent a Semester with containing students and other information
+ *
+ */
 class Sem
 {   
     ArrayList<Students> li;
@@ -87,6 +100,10 @@ class Sem
         }
     }
 }
+/**
+ * This class represnts a Course in a Institute
+ *
+ */
 class Course
 {
     String name;
@@ -136,6 +153,10 @@ class Course
         }
     }
 }
+/**
+ * This class represents a Department in a Institute
+ *
+ */
 class Department
 {
    String name;
@@ -185,6 +206,10 @@ class Department
         }
     } 
 }
+/**
+ * This class represents an Institute
+ *
+ */
 class Institute
 {
   String name;
@@ -234,6 +259,10 @@ class Institute
         }
     }   
 }
+/**
+ * This class represents a University containing one or more Institute
+ *
+ */
 public class University {
     
     public static void main(String[] args)

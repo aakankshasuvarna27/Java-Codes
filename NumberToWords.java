@@ -16,11 +16,11 @@ String l19[]={"","One ","Two ","Three ","Four ","Five ","Six ","Seven ","Eight "
             s=in.readLine();l=s.length();int n[]=new int[13];
              for(int i=l-1;i>=0;i--,c--)
                  {
-                 n[c]=s.charAt(i)-48;       //converting character to integer
+                 n[c]=s.charAt(i)-48;//extracting character and converting character to integer
              }y=0;
              for(int i=++c;i<13;i++)
                  {
-                     switch(i)      //switching for all possible cases
+                     switch(i)//switch case 
                      {
                          case 0:if(n[i]==0)break;ans=ans+l19[n[i]]+"Trillion ";break;
                          case 1:
