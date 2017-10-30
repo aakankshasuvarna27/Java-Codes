@@ -10,6 +10,7 @@ class NumberToWords {
         DataInputStream in = new DataInputStream(System.in);
         int t, l, x, y;
         String s, ans;
+        // initializing the strings to store the words for each number
         String l19[] = {"", "One ", "Two ", "Three ", "Four ", "Five ", "Six ", "Seven ", "Eight ", "Nine ", "Ten ", "Eleven ", "Twelve ", "Thirteen ", "Fourteen ", "Fifteen ", "Sixteen ", "Seventeen ", "Eighteen ", "Nineteen "};
         String l90[] = {"", "", "Twenty ", "Thirty ", "Forty ", "Fifty ", "Sixty ", "Seventy ", "Eighty ", "Ninety "};
         //System.out.println("Enter input:");
