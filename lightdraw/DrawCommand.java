@@ -1,4 +1,8 @@
+package javacodes.lightdraw;
+
 public interface DrawCommand {
-	void draw();
-	void undo();
+
+    void draw();
+
+    void undo();
 }

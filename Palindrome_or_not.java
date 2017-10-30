@@ -1,10 +1,8 @@
+package javacodes;
+
 /*
 Write a program to check the given number is palindrome or not?
 Descritpion : A Palindrome number is a number that remains the same when its digits are reversed. Like 16461, for example: we take 121 and reverse it, after revers it is same as original number
-*/
-
-/*
-This code is much shorter written in java
 */
 import java.util.Scanner;
 

@@ -1,4 +1,3 @@
-
 package javacodes;
 
 import java.util.*;
@@ -25,69 +24,65 @@ public class ProduConsum{
         pt.join();              // Current thread execution is paused, until specified thread is dead.
         
         ct.join();
-        
+
         System.out.println("Existing main Thread");
     }
 }
-class Producer implements Runnable
-{
+
+class Producer implements Runnable {
+
     Queue queue;
-    
-    Producer(Queue queue)
-    {
-        this.queue=queue;
-        
-        
+
+    Producer(Queue queue) {
+        this.queue = queue;
+
     }
-    public void run()
-    {
-        int i=0;
-        
-        while(i<=20)
-        {
+
+    public void run() {
+        int i = 0;
+
+        while (i <= 20) {
             queue.set(i);
-            
+
             i++;
         }
         System.out.println("Existing Producer Thread");
-        
-        queue.producerAlive=false;
+
+        queue.producerAlive = false;
     }
 }
-class Consumer implements Runnable
-{
+
+class Consumer implements Runnable {
+
     Queue queue;
-    
-    Consumer(Queue queue)
-    {
-        this.queue=queue;
+
+    Consumer(Queue queue) {
+        this.queue = queue;
     }
-    public void run()
-    {
-        while(queue.producerAlive)
-        {
+
+    public void run() {
+        while (queue.producerAlive) {
             queue.get();
         }
         System.out.println("Existing Consumer Thread");
     }
 }
-class Queue
-{
-    int n=0;
-    
-    boolean valueset=false;
-    
-    boolean producerAlive=true;
-    
-    synchronized void get()
-    {
-        if(!valueset)
-        {
+
+class Queue {
+
+    int n = 0;
+
+    boolean valueset = false;
+
+    boolean producerAlive = true;
+
+    synchronized void get() {
+        if (!valueset) {
             try {
                 wait();     // Current thread will wait until notify() is invoked
                 
             } catch (InterruptedException e) {
-                
+
                 System.out.println("Error");
             }
         }
@@ -97,23 +92,22 @@ class Queue
         
         notify();           // Wakes up thread that is waiting on Object's monitor
     }
-    synchronized void set(int n)
-    {
-        if(valueset)
-        {
+
+    synchronized void set(int n) {
+        if (valueset) {
             try {
-                
+
                 wait();
-                
+
             } catch (InterruptedException e) {
-                
+
                 System.out.println("Value set");
             }
         }
-        this.n=n;
-        
-        valueset=true;
-        
+        this.n = n;
+
+        valueset = true;
+
         notify();
     }
 }
