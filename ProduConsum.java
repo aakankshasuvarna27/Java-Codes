@@ -1,24 +1,28 @@
 package javacodes;
 
-public class ProduConsum {
+import java.util.*;
 
-    public static void main(String[] args) throws InterruptedException {
-        Queue q = new Queue();
-
-        Producer p = new Producer(q);
-
-        Consumer c = new Consumer(q);
-
-        Thread pt = new Thread(p);
-
-        Thread ct = new Thread(c);
-
-        pt.start();
-
+public class ProduConsum{
+    
+    public static void main(String []args)throws InterruptedException
+            
+    {
+        Queue q=new Queue();
+        
+        Producer p=new Producer(q);
+        
+        Consumer c=new Consumer(q);
+        
+        Thread pt=new Thread(p);
+        
+        Thread ct=new Thread(c);
+        
+        pt.start();             // Thread execution begins
+        
         ct.start();
-
-        pt.join();
-
+        
+        pt.join();              // Current thread execution is paused, until specified thread is dead.
+        
         ct.join();
 
         System.out.println("Existing main Thread");
@@ -75,18 +79,18 @@ class Queue {
     synchronized void get() {
         if (!valueset) {
             try {
-                wait();
-
+                wait();     // Current thread will wait until notify() is invoked
+                
             } catch (InterruptedException e) {
 
                 System.out.println("Error");
             }
         }
-        valueset = false;
-
-        System.out.println("Got" + " " + this.n);
-
-        notify();
+        valueset=false;
+        
+        System.out.println("Got"+" "+this.n);
+        
+        notify();           // Wakes up thread that is waiting on Object's monitor
     }
 
     synchronized void set(int n) {

@@ -188,9 +188,11 @@ class Department {
         }
     }
 
-    void showdept() {
-        int c = 1;
-
+    /*this funtion is used show the all item */
+     void showdept()
+    {
+        int c=1;
+        
         System.out.println(name);
 
         for (Course i : li) {
