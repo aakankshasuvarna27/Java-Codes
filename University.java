@@ -190,6 +190,7 @@ class Department
         li.add(obj);
     }
      }
+    /*this funtion is used show the all item */
      void showdept()
     {
         int c=1;
