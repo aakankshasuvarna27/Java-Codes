@@ -6,8 +6,8 @@ Descritpion : A Palindrome number is a number that remains the same when its dig
 */
 import java.util.Scanner;
 
-class Palindrome_or_not
-{
+class Palindrome_or_not {
+
   public static void main(Sting args[])
   {
     Scanner x = new Scanner(System.in);
