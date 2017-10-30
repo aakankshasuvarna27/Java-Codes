@@ -12,6 +12,7 @@ class Magic_number
 	int n,v,t,d=0,s;
 	System.out.println("Enter the number");
        n=Integer.parseInt(br.readLine());
+		//implementing the Algorithm
 for(v=n;v>9;v=s){
 	for(t=v,s=0;t>0;t=t/10)	{
 			d=t%10;
