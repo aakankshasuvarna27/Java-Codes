@@ -13,7 +13,7 @@ class NumberToWords {
         String l19[] = {"", "One ", "Two ", "Three ", "Four ", "Five ", "Six ", "Seven ", "Eight ", "Nine ", "Ten ", "Eleven ", "Twelve ", "Thirteen ", "Fourteen ", "Fifteen ", "Sixteen ", "Seventeen ", "Eighteen ", "Nineteen "};
         String l90[] = {"", "", "Twenty ", "Thirty ", "Forty ", "Fifty ", "Sixty ", "Seventy ", "Eighty ", "Ninety "};
         //System.out.println("Enter input:");
-        t = Integer.parseInt(in.readLine());
+        t = Integer.parseInt(in.readLine());    //taking number as input
         while (t > 0) {
             ans = "";
             int c = 12;
@@ -21,7 +21,7 @@ class NumberToWords {
             l = s.length();
             int n[] = new int[13];
             for (int i = l - 1; i >= 0; i--, c--) {
-                n[c] = s.charAt(i) - 48;    //extracting character
+                n[c] = s.charAt(i) - 48;    //extracting character and converting character to integer
             }
             y = 0;
             for (int i = ++c; i < 13; i++) {
