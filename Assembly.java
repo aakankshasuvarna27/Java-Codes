@@ -183,3 +183,22 @@ public class Assembly {
         }
     }
 }
+
+/** Sample input
+* SET a 1
+* SET b 2
+* SET goal 5
+* SET flag 0
+* IF flag 0
+* ADD a b c
+* IF a goal
+* ADD a a a
+* SET flag 1
+* END
+* ECHO a
+* SET a b
+* SET b c
+* CONTINUE
+* END
+* ###
+*/
