@@ -4,22 +4,30 @@ package javacodes;
 Write a program to check the given number is palindrome or not?
 Descritpion : A Palindrome number is a number that remains the same when its digits are reversed. Like 16461, for example: we take 121 and reverse it, after revers it is same as original number
 */
+
+package javacodes;
+
 import java.util.Scanner;
 
-class Palindrome_or_not {
+class PalindromeOrNot {
 
-  public static void main(Sting args[])
-  {
-    Scanner x = new Scanner(System.in);
-    
-    String st=x.next();
-    String w=""; // Creating new string to apply algo on!
-    int i;
-    for(i=0;i<st.length();i++)
-      w=st.charAt(i)+w; //Reversing the String and Storing it.
-    if(st.compareTo(w)==0) //Comparing the string to original string
-      System.out.prinltn("Number is Pallindrome");
-    else
-      System.out.println("Number is Not Pallindrome");
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.print("Enter a number: ");
+    String input = scanner.next(); // Get input from user
+
+    // Use StringBuilder to reverse the string
+    String reversed = new StringBuilder(input).reverse().toString();
+
+    // Check if the input and the reversed string are equal
+    if (input.equals(reversed)) {
+      System.out.println("The number is a palindrome.");
+    } else {
+      System.out.println("The number is not a palindrome.");
+    }
+
+    scanner.close();
   }
 }
+
